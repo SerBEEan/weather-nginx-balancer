@@ -1,0 +1,9 @@
+FROM node:16
+
+EXPOSE 3010
+WORKDIR /usr/src/app
+COPY ./express-weather-api/ .
+ENV SERVICE_ID 2
+
+RUN npm i
+CMD [ "npm", "start" ]
